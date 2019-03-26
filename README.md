@@ -13,6 +13,15 @@ Please ★ this repo if you found it useful ★ ★ ★
 * customize max threads
 
 
+## Benchmarks
+
+fastdash is multithreaded and is faster for CPU intensive tasks
+![Screenshot from 2019-03-26 03-26-49](https://user-images.githubusercontent.com/6234038/54982089-ea2c8700-4f77-11e9-869b-f75ac9ca7305.png)
+
+lodash is single threaded and takes longer for CPU intensive tasks
+![Screenshot from 2019-03-26 03-28-00](https://user-images.githubusercontent.com/6234038/54982097-f1ec2b80-4f77-11e9-92ad-2c54482ba1a1.png)
+
+
 ## Installation
 
 ```sh
