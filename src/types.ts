@@ -4,9 +4,9 @@ export type Context = object;
 
 export type Key = string | number;
 
-export type Result = any[] | string;
-
-export type Iteratee = (value: any, key?: Key, context?: Context) => {};
+export interface Message {
+  result: any;
+}
 
 export interface Options {
   maxThreads: number;
@@ -15,6 +15,4 @@ export interface Options {
 
 export interface WorkerData {
   context: Context;
-  iteratee: Iteratee;
-  partialCollection: Collection;
 }
