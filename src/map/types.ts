@@ -7,6 +7,6 @@ export type MapIteratee = (value: any, key?: Key, context?: Context) => {};
 export interface MapOptions extends Options {}
 
 export interface MapWorkerData extends WorkerData {
-  iteratee: MapIteratee;
+  iterateeString: string;
   partialCollection: Collection;
 }

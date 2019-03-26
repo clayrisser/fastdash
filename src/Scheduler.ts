@@ -16,7 +16,7 @@ export default class Scheduler {
 
   context: Context;
 
-  constructor(options?: Options) {
+  constructor(options?: Partial<Options>) {
     if (!isMainThread) throw new Error('not main thread');
     this.options = {
       ...defaultOptions,
@@ -25,7 +25,7 @@ export default class Scheduler {
     this.context = this.options.context;
     this.cpuCount = os.cpus().length;
     this.threadCount =
-      this.cpuCount > this.options.maxThreads
+      this.cpuCount > this.options.maxThreads && this.options.maxThreads > 0
         ? this.options.maxThreads
         : this.cpuCount;
   }

@@ -27,7 +27,22 @@ npm install --save fastdash
 
 ## Usage
 
-[Contribute](https://github.com/codejamninja/fastdash/blob/master/CONTRIBUTING.md) usage docs
+Iteratee callback functions must be pure functions
+
+### map
+
+```js
+import fast from 'fastdash';
+
+async main() {
+  const result = await fast.map([1, 2, 3], item => {
+    return item + 1;
+  });
+  console.log(result); // [2, 3, 4]
+}
+
+main();
+```
 
 
 ## Support

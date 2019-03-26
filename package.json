@@ -1,6 +1,6 @@
 {
   "name": "fastdash",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "multithreaded utility functions for node using worker threads",
   "keywords": [
     "fastdash",
@@ -38,16 +38,18 @@
     "build": "npm run build:types && npm run build:js",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "build:types": "tsc --emitDeclarationOnly",
-    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/* && jest --clearCache",
     "format": "prettier --write ./src/*.ts ./src/**/*.ts",
     "lint": "npm run format && eslint ./src/**/*.ts",
     "lint:fix": "npm run format && eslint --fix ./**/*.ts",
     "prepublish": "npm run build",
     "start": "NODE_OPTIONS=--experimental-worker node lib",
+    "test": "npm run lint && NODE_OPTIONS=--experimental-worker jest",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.0",
     "@types/node": "^11.11.6"
   },
   "devDependencies": {
@@ -58,6 +60,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.11",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "eslint": "^5.15.0",
@@ -65,13 +68,23 @@
     "eslint-config-jam": "^0.2.5",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3333"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=10.0.0"
   },
   "eslintIgnore": [
     "lib"
-  ]
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "verbose": true,
+    "testRegex": [
+      "tests/.*[^d]\\.[jt]sx?$"
+    ]
+  }
 }

@@ -2,6 +2,11 @@
   "extends": ["jam/typescript"],
   "rules": {
     "import/named": "off",
-    "no-unused-vars": "off"
+    "import/no-unresolved": "off",
+    "no-else-return": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    "prefer-destructuring": "off",
+    "no-eval": "off"
   }
 }
