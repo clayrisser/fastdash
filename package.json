@@ -51,8 +51,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "@types/node": "^11.11.6",
-    "@types/sleep": "^0.0.7"
+    "@types/node": "^11.11.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -73,7 +72,6 @@
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.5.0",
     "lodash": "^4.17.11",
-    "sleep": "^6.0.0",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3333"
