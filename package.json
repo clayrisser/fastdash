@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "multithreaded mapping for node",
   "keywords": [
-    "fast-map",
+    "fastdash",
     "typescript",
     "ts",
     "map",
@@ -15,9 +15,9 @@
     "async",
     "asynchronous"
   ],
-  "homepage": "https://github.com/codejamninja/fast-map",
+  "homepage": "https://github.com/codejamninja/fastdash",
   "bugs": {
-    "url": "https://github.com/codejamninja/fast-map/issues",
+    "url": "https://github.com/codejamninja/fastdash/issues",
     "email": "jam@codejam.ninja"
   },
   "license": "MIT",
@@ -32,7 +32,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codejamninja/fast-map"
+    "url": "https://github.com/codejamninja/fastdash"
   },
   "scripts": {
     "build": "npm run build:types && npm run build:js",
