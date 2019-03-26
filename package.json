@@ -35,6 +35,7 @@
     "url": "https://github.com/codejamninja/fastdash"
   },
   "scripts": {
+    "benchmark:map": "NODE_OPTIONS=--experimental-worker node lib/map/benchmark",
     "build": "npm run build:types && npm run build:js",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "build:types": "tsc --emitDeclarationOnly",
@@ -50,7 +51,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "@types/node": "^11.11.6"
+    "@types/node": "^11.11.6",
+    "@types/sleep": "^0.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -61,6 +63,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-typescript": "^7.3.3",
     "@types/jest": "^24.0.11",
+    "@types/lodash": "^4.14.123",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "eslint": "^5.15.0",
@@ -69,6 +72,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.5.0",
+    "lodash": "^4.17.11",
+    "sleep": "^6.0.0",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3333"

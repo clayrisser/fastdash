@@ -6,7 +6,8 @@ import { MapIteratee, MapResult } from './types';
 
 export default async function worker(): Promise<MapResult> {
   const partialCollection: Collection = workerData.partialCollection;
-  const iteratee: MapIteratee = eval(workerData.iterateeString);
+  let iteratee: MapIteratee = f => f;
+  eval(`iteratee = ${workerData.iterateeString};`);
   const context: Context = workerData.context;
   const result: MapResult = await partialMap(
     partialCollection,
