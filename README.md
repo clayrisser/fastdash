@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/fastdash.svg?style=social&label=Stars)](https://github.com/codejamninja/fastdash)
 
-> multithreaded mapping for node
+> multithreaded utility functions for node using worker threads
 
 Please ★ this repo if you found it useful ★ ★ ★
 

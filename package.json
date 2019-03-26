@@ -1,7 +1,7 @@
 {
   "name": "fastdash",
   "version": "0.0.1",
-  "description": "multithreaded mapping for node",
+  "description": "multithreaded utility functions for node using worker threads",
   "keywords": [
     "fastdash",
     "typescript",
