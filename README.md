@@ -1,5 +1,7 @@
 # fastdash
 
+![](assets/fastdash.png)
+
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/fastdash.svg?style=social&label=Stars)](https://github.com/codejamninja/fastdash)
 
 > multithreaded utility functions for node using worker threads
